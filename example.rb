@@ -19,5 +19,5 @@ gresult_2 = gm.request(GRequest.new("AMAZON+Kindle", 2012, 10, 3))
 # output search result as csv file
 gm.outputAsCsv(gresult_2, "result_amazon_and_kindle.csv")
 
-# convert search result to array(hash) and print it : Result is [ {"date"=>"2013-10-1", "number"=>"83"}, ... ]
+# convert search result to array(hash) and print it : Result is [ {"date"=>"2012-10-1", "number"=>"53"}, ... ]
 pp gm.getResultAsArray(gresult_2)
