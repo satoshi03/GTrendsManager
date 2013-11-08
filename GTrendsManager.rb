@@ -1,4 +1,3 @@
-
 require 'net/http'
 require 'uri'
 
@@ -34,6 +33,15 @@ class GResult
     return @row_list.size
   end
 
+  def toArray()
+    array = Array.new
+    results_array = getRows
+    results_array.each do |row|
+      array.push({ 'date' => row.date, 'number' => row.number })
+    end
+    return array
+  end
+
   def printRows()
     results_array = getRows
     results_array.each do |row|
@@ -67,6 +75,10 @@ class GTrendManager
     results_array.each do |row|
       File.open(file_name, 'a') {|f| f.puts("#{row.date}, #{row.number}\n") }
     end
+  end
+  
+  def getResultAsArray(gresult)
+    return gresult.toArray
   end
 
   def printResult(gresult)
