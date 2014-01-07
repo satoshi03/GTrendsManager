@@ -1,4 +1,4 @@
 GTrendsManager
 ==============
 
-Ruby library : Get reponse from Google Trends
+Ruby library : Get response and return formatted data from Google Trends API
